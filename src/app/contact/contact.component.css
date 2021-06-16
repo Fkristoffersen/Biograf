@@ -1,0 +1,81 @@
+#container{
+    color: white;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    font-family: 'Arvo', serif;
+    height: 92vh;
+    background-image: url('https://cdn.discordapp.com/attachments/805940701350199314/844883410769674270/backgroundNEW.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 120px 0px 0px 120px;
+
+}
+form h2{
+    padding-bottom: 60px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px black;
+}
+form input{
+    width: 420px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+form textarea{
+    resize: none;
+    width: 90%;
+    height: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    outline: none;
+}
+
+form label{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-shadow: -1px -1px black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+}
+#Left{
+    flex: 1;
+    margin-right: 10px;
+}
+#Right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0px 120px 0px 10px;
+}
+img{
+    height: 420px;
+    width: 740px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10%;
+    box-shadow: 0 0 30px 10px black;
+    margin-top: 10%;
+}
+button{
+    height: 38px;
+    width: 92%;
+    margin-top: 10px;
+    border: none;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+button:hover{
+    background-color: #C60012;
+    /* background-color: #1a9c1a; */
+
+}

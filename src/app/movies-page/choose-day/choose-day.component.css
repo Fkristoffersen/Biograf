@@ -1,0 +1,67 @@
+.space{
+    margin: 50px;
+} 
+
+.day-wrapper{
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.wrap{
+    height: 150px;
+    width: 400px;
+
+    border: solid 3px #C60012;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 10px black;
+
+
+    margin-bottom: 5vh;
+    margin-right: 3vw;
+
+    cursor: pointer;
+}
+
+
+.day{
+    height: 75%;
+    background-color: rgb(7, 10, 12);
+
+    align-self: flex-end;
+    position: relative;
+}
+.date{
+    height: 25%;
+    background-color: #303335;
+    position: relative;
+}
+p{
+    /* Align item bottom-center. Parent is relative, notice width 100%. */
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    text-align: center;
+
+    font-size: 25px;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+button{
+    color: white;
+    background-color: #191b1c;
+    border-color: #C60012;
+    font-family: 'Arvo', serif;
+    border-radius: 2px; 
+    
+    padding: 5px;
+    margin-left: 90%;
+
+    cursor: pointer;
+
+}

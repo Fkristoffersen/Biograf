@@ -1,0 +1,31 @@
+:host{
+    padding: 145px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 0px;
+    background-color: #191b1c;
+}
+
+.nav-button:hover {
+    opacity: 0.8;
+}
+
+#slideshow{
+    border-radius: 15px;
+    padding: 6px; 
+    background-color: #191b1c;
+    text-align: center;
+    margin: 10px;
+}
+#Shop-button{
+    font-family: 'Arvo', serif;
+}
+
+#SeFilm{
+    position: relative;
+    z-index: 2;
+}
+#slider{
+    z-index: 1;
+    position: relative;
+}

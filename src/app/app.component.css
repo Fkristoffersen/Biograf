@@ -1,0 +1,18 @@
+#master{
+    display: flex;
+    flex-direction: column;
+}
+#Fod{
+    text-align: left;
+    color: white;
+    font-family: 'Arvo', serif;
+    border-top: solid #C60012 2px;
+    padding: 4px;
+    font-size: 10px;
+    margin: 0;
+    background-color: black;
+
+    position: fixed;
+    top:98vh;
+    width: 100%;
+}

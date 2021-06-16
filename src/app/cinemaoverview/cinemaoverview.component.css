@@ -1,0 +1,20 @@
+:host{
+    display: block;
+    background-color: #191b1c;
+    padding: 20px;
+    color:white;
+}
+
+.cinemaoverview {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+    
+
+ h1 {
+     text-align: center;
+     font-family: 'Bebas Neue';
+   
+ }
+

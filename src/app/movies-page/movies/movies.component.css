@@ -1,0 +1,9 @@
+app-movie-item{
+    background-image: url("https://eskipaper.com/images/black-backgrounds-5.jpg");
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-repeat: repeat;
+    background-size: contain;
+    height: 100%;
+}

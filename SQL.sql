@@ -1,0 +1,181 @@
+USE MASTER
+GO
+IF exists(SELECT * FROM sys.databases WHERE NAME = 'Cinema')
+BEGIN
+	DROP DATABASE Cinema
+END
+GO
+
+CREATE DATABASE Cinema
+GO
+
+USE Cinema
+GO
+
+
+
+CREATE TABLE Customers
+(
+CustomerID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Firstname NVARCHAR(30) NOT NULL,
+Lastname NVARCHAR(40) NOT NULL,
+Email NVARCHAR(40) NOT NULL,
+[Address] NVARCHAR(40) NOT NULL,
+Zipcode NVARCHAR(4) NOT NULL,
+[Password] NVARCHAR(40) NOT NULL
+
+)
+GO
+
+CREATE TABLE Film
+(
+FilmID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Titel NVARCHAR(MAX) NOT NULL,
+RunTime TIME NOT NULL,
+StartDate DATE NOT NULL,
+EndDate DATE NOT NULL
+)
+GO
+
+CREATE TABLE Screening
+(
+ScreeningID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Hall INT NOT NULL,
+[Date] DATE NOT NULL,
+[Time] TIME NOT NULL,
+FilmID INT FOREIGN KEY(FilmID) REFERENCES Film(FilmID),
+
+CONSTRAINT chk_Hall CHECK (Hall BETWEEN 1 and 3 )
+)
+GO
+
+CREATE TABLE [Admin]
+(
+AdminID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Firstname NVARCHAR(30) NOT NULL,
+Lastname NVARCHAR(40) NOT NULL,
+Email NVARCHAR(40) NOT NULL,
+[Password] NVARCHAR(40) NOT NULL
+)
+GO
+
+CREATE TABLE Seats
+(
+SeatID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+Hall INT NOT NULL,
+Seat INT NOT NULL,
+[Row] INT NOT NULL,
+
+)
+GO
+
+CREATE TABLE Reservation
+(
+ReservationID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+SeatID INT  NOT NULL FOREIGN KEY(SeatID) REFERENCES Seats(SeatID),
+ScreeningID INT  NOT NULL FOREIGN KEY(ScreeningID) REFERENCES Screening(ScreeningID)
+)
+GO
+
+CREATE TABLE CandyShop
+(
+CandyID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+[Name] NVARCHAR(30) NOT NULL,
+Size NVARCHAR(10) NOT NULL,
+Price INT NOT NULL,
+
+CONSTRAINT chk_Price CHECK (Price > 0)
+)
+GO
+
+CREATE TABLE ShoppingCart
+(
+CartID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+CandyID INT  NOT NULL FOREIGN KEY(CandyID) REFERENCES CandyShop(CandyID),
+Total DECIMAL NOT NULL
+)
+GO
+
+CREATE TABLE Ticket
+(
+TicketID INT NOT NULL PRIMARY KEY,
+CustomerID INT NOT NULL FOREIGN KEY(CustomerID) REFERENCES Customers(CustomerID),
+ReservationID INT NOT NULL FOREIGN KEY(ReservationID) REFERENCES Reservation(ReservationID),
+ScreeningID INT NOT NULL FOREIGN KEY(ScreeningID) REFERENCES Screening(ScreeningID),
+CartID INT NOT NULL FOREIGN KEY(CartID) REFERENCES ShoppingCart(CartID),
+)
+GO
+
+CREATE PROC NEW_CUSTOMER ( 
+@Firstname NVARCHAR(30),
+@Lastname NVARCHAR(40) ,
+@Email NVARCHAR(40),
+@Address NVARCHAR(40),
+@Zipcode NVARCHAR(4),
+@Password NVARCHAR(40))
+AS
+BEGIN 
+INSERT INTO Customers VALUES(@Firstname,@Lastname,@Email,@Address,@Zipcode,@Password)
+END
+EXEC NEW_CUSTOMER
+GO
+
+CREATE PROC DELETE_CUSTOMER (@CustomerID INT)
+AS
+BEGIN
+DELETE FROM Customers where CustomerID = @CustomerID;
+END
+EXEC DELETE_CUSTOMER
+
+GO
+CREATE PROC UPDATE_CUSTOMER (
+@CustomerID int,
+@Firstname NVARCHAR(30),
+@Lastname NVARCHAR(40) ,
+@Email NVARCHAR(40),
+@Address NVARCHAR(40),
+@Zipcode NVARCHAR(4),
+@Password NVARCHAR(40))
+AS
+BEGIN
+UPDATE Customers 
+SET Firstname = @Firstname, Lastname = @Lastname, Email = @Email, [Address] = @Address, Zipcode = @Zipcode, [Password] = @Password
+WHERE CustomerID = @CustomerID;
+END
+EXEC UPDATE_CUSTOMER
+GO
+
+CREATE PROC NEW_ADMIN (
+    
+@Firstname NVARCHAR(30),
+@Lastname NVARCHAR(40),
+@Email NVARCHAR(40),
+@Password NVARCHAR(40))
+AS
+BEGIN
+INSERT INTO [Admin] VALUES(@Firstname,@Lastname,@Email,@Password)
+END
+EXEC NEW_ADMIN
+GO
+
+CREATE PROC DELETE_ADMIN (@AdminID INT)
+AS
+BEGIN 
+DELETE FROM [Admin] WHERE AdminID = @AdminID;
+END 
+EXEC DELETE_ADMIN
+GO
+
+
+
+
+/*
+CONSTRAINT chk_Hall CHECK (Hall BETWEEN 1 and 3 ),
+CONSTRAINT chkSeat CHECK (Seat >=1 OR Seat <=300 ),
+CONSTRAINT chk_Row CHECK (Row BETWEEN 1 and 30 )
+*/
+
+
+ALTER TABLE [dbo].[Seats]
+WITH CHECK
+ADD CONSTRAINT chk_Hall CHECK (Hall BETWEEN 1 and 3 )

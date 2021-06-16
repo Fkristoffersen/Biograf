@@ -1,0 +1,41 @@
+#container{
+    display: flex;
+    color: white;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cdn.discordapp.com/attachments/805940701350199314/844883410769674270/backgroundNEW.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arvo', serif;
+    text-shadow: -1px -1px black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+form .inp{
+    margin-top: 6px;
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-right: 120px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+
+}
+form{
+    padding: 20px;
+    border: 2px solid rgb(34, 33, 33);
+    background-color: rgb(144 23 20) ;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    box-shadow: 0 0 30px 5px black;
+}
+.btn{
+    border: none;
+    padding: 10px;
+    background-color: white;
+}
+.btn:hover{
+    color: white;
+    background-color: black;
+}

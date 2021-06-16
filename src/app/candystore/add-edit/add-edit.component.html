@@ -1,0 +1,46 @@
+<h1>WEB API TEST</h1>
+
+<div class="buttons">
+    <button class="btn" (click)="GET()">GET</button>
+    <button class="btn" (click)="GETWHERE()">GET WHERE</button>
+    <button class="btn" (click)="POST()">CREATE</button>
+    <button class="btn" (click)="DELETE()">DELETE </button>
+    <button class="btn" (click)="PUT()">UPDATE</button>
+</div>
+
+<input type ="text" class="testinput" placeholder="Søgefelt"/>
+<input type ="text" id=Name placeholder="Name"/>
+<input type ="text" id=Size placeholder="Size"/>
+<input type ="text" id=Price placeholder="Price"/>
+
+<p id="demo"></p>
+
+<div>
+  <table border="1">
+    <tr>
+      <th>CandyID</th>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Prize</th>
+    </tr>
+    <tr *ngFor="let candyArray of CandyArray">
+      <td>{{candyArray.CandyID}}</td>
+      <td>{{candyArray.Name}}</td>
+      <td>{{candyArray.Size}}</td>
+      <td>{{candyArray.Price}}</td>
+    </tr>
+  </table>
+</div>
+
+<div id="mainBoks">
+<div class="slikboks" *ngFor="let candyArray of CandyArray">
+    <img src="assets/Image/haribomatador.png" width="210px" height="210px" alt="Slikpose">
+    <div class="wrap-tekst">
+  <p>{{candyArray.Name}}:{{candyArray.Price}} kr.-</p>
+  <td>Str: {{candyArray.Size}}</td>
+  </div>
+  <button class="buy">Læg i kurv</button>
+</div>
+</div>
+
+<router-outlet></router-outlet>

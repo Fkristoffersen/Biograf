@@ -1,0 +1,69 @@
+:host{
+    background-color:white;
+    
+}
+#mainBoks{
+    background-image: url("https://eskipaper.com/images/black-backgrounds-5.jpg");
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Arvo', serif;
+    padding-left: 1.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.slikboks{
+    color: white;
+    background-color: black;
+    border: 2px solid #C60012;
+    border-radius: 3%;
+    box-shadow: 0 0 30px 10px black;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+    transition: width 1s;
+
+}
+
+.slikboks:hover{
+    border: 2px solid rgb(236, 236, 23);
+    width: 350px;
+}
+
+
+
+.slikboks button{
+    padding: 3px;
+    background-color: black;
+    border: 2px solid #C60012;
+    border-radius: 3%;
+    color: white;
+    font-family: 'Arvo', serif;
+    width: 50%;
+}
+.slikboks img, .slikboks p, .slikboks button{
+    margin: 3px;
+}
+.wrap-tekst{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    margin: 5%;
+    padding-left: 25%;
+}
+button:hover{
+    opacity: 0.8;
+}
+/* Så bunden ligner op. */
+.space{
+    margin: 18px;
+}

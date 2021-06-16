@@ -1,0 +1,92 @@
+.nav-button{
+    color: white;
+    background-color: #191b1c;
+    border-color: #C60012;
+    padding: 5px; 
+    border-radius: 6px; 
+    margin-left: 20px;
+    font-family: 'Arvo', serif;
+}
+.nav-button:hover{
+    opacity: 0.8;
+}
+
+#Contact-button, #Login-button{
+    margin-left: 25px;
+    
+}
+#title{
+     margin-left: 330px;
+     font-family: 'Bebas Neue', cursive;
+     font-size: 25px;
+     display: flex;
+     flex-direction: row;
+     justify-items: center;
+     color:white;
+}
+#TopTitle{
+    padding-left: 10px;
+    color: #e20000;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+    border-bottom-color: red!important;
+    border-color:#191b1c;
+    position: relative;
+    top:0;
+    width: 99.6%;
+    background-color: black; 
+}
+#house {
+    border: 2px solid red;
+    border-radius: 50%; 
+}
+#house:hover {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+#Login-button{
+    margin-right: 125px;
+}
+
+@media screen and (max-width: 1200px){
+
+
+    #Login-button{
+        margin-right: 50px;
+    }
+
+    #title{
+        margin-left: 250px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 23px;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        color:white;
+   }
+
+   .nav-button{
+    color: white;
+    background-color: #191b1c;
+    border-color: #C60012;
+    padding: 5px; 
+    border-radius: 6px; 
+    margin-left: 20px;
+    font-family: 'Arvo', serif;
+    }
+
+    #house {
+        border: 2px solid red;
+        border-radius: 50%;
+        
+    }
+
+}
