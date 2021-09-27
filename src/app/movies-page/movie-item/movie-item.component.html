@@ -1,4 +1,13 @@
-<div class="Movie">
+
+<div class="Movie"*ngFor="let filmArray of FilmArray">
+  <img src="{{filmArray.Picture}}" alt="" width="150px" height="150px">
+<div class="wrap-knap">
+  <button class="Trailer">Trailer</button>
+  <button routerLink="/billet" id="Billet">Billet</button>
+</div>
+</div>
+<router-outlet></router-outlet>
+<!-- <div class="Movie">
         <img src="assets/Image/infinitywar.png" alt="" width="150px" height="150px">
     <div class="wrap-knap">
         <button class="Trailer">Trailer</button>
@@ -84,7 +93,7 @@
         <button class="Trailer">Trailer</button>
         <button routerLink="/billet" id="Billet">Billet</button>
     </div>
-</div>
+</div> -->
 
 <div class="Space"></div>
 

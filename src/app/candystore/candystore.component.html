@@ -1,5 +1,26 @@
-
 <div id="mainBoks">
+  <div class="slikboks" *ngFor="let candyArray of CandyArray, let i = index">
+      <img src="{{candyArray.Picture}}" width="210px" height="210px" alt="Slikpose">
+      <div class="wrap-tekst">
+    <p>{{candyArray.Name}}:{{candyArray.Price}} kr.-</p>
+    <td>Str: {{candyArray.Size}}</td>
+
+    <input type ="text" id=CustomerID placeholder="CustomerID"/>
+    <input type ="text" id=OrderID placeholder="OrderID"/>
+    <input type ="text" id=CandyID placeholder="CandyID"/>
+    <input type ="text" id="{{ 'Quantity' + i }}" placeholder="Antal"/>
+    <input type ="text" id=Date placeholder="Date"/>
+    <input type ="text" id=Total placeholder="Total"/>
+    </div>
+
+    <button class ="buy" id="candyArray.id5" class="nav-button" (click)="POST(i)">Læg i kurv</button>
+    {{i}}
+  </div>
+  <button class ="buy" routerLink="/cart" id="cart-button1" class="nav-button">Gå til kurv</button>
+  </div>
+  <div class="space"></div>
+
+<!-- <div id="mainBoks">
 
     <div class="slikboks">
         <img src="assets/Image/haribomatador.png" width="210px" height="210px" alt="Slikpose">
@@ -130,8 +151,8 @@
         <button class="buy">Læg i kurv</button>
     </div>
 
-</div>
-<div class="space"></div>
+</div> -->
+
 
 
 <!-- <div class="slikboks">

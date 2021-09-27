@@ -1,18 +1,18 @@
 .Movie{
     background-color: rgb(12, 11, 11);
-    border-radius: 4px; 
+    border-radius: 4px;
     box-shadow: 0 0 30px 10px black;
     border: 1px solid black;
 
     display: flex;
     flex-direction: column;
-    
+
     margin: 20px;
     padding: 2px;
 
     width: 300px;
     height: 300px;
-    transition: width 1s,height 0.5s; 
+    transition: width 1s,height 0.5s;
 }
 
 .Movie:hover{
@@ -23,11 +23,11 @@
 .Space{
     margin-bottom: 500px;
     padding: 10px;
-    
+
 }
 
 img{
-    border-radius: 2px; 
+    border-radius: 2px;
     width: 100%;
     height: 85%;
     object-fit: cover;
@@ -38,7 +38,7 @@ img{
 .wrap-knap{
     display: flex;
     justify-content: space-between;
-    
+
     margin-top: 2%;
 }
 button{
@@ -46,8 +46,8 @@ button{
     background-color: #191b1c;
     border-color: #C60012;
     font-family: 'Arvo', serif;
-    border-radius: 2px; 
-    
+    border-radius: 2px;
+
     width: 49.5%;
     height: 185%;
 

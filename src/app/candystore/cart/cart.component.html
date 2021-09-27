@@ -1,0 +1,17 @@
+<button class ="payment" routerLink="/kassen" id="payment-button" class="nav-button">Gå til kassen</button>
+
+<div class="Order">
+  <div id="mainBoks">
+    <div class="slikboks" *ngFor="let cartArray of ShoppingArray">
+
+        <div class="wrap-tekst">
+      <p>CandyID:{{cartArray.CandyID}}</p>  <!--Lav om til billed-->
+      <p>Antal: {{cartArray.CustomerID}}</p>
+      <p>Total:{{cartArray.Quantity}} kr </p> <!--Antal*pris-->
+        </div>
+      <button class="Delete">Slet fra kurv</button>
+    </div>
+    </div>
+    <input type ="text" id=CustomerID placeholder="CustomerID"/>
+    <button class="buy" (click)="GETWHERE()">GET</button>
+</div>

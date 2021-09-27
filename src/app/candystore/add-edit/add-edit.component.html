@@ -12,6 +12,7 @@
 <input type ="text" id=Name placeholder="Name"/>
 <input type ="text" id=Size placeholder="Size"/>
 <input type ="text" id=Price placeholder="Price"/>
+<input type ="text" id=Picture placeholder="Picture"/>
 
 <p id="demo"></p>
 
@@ -28,19 +29,100 @@
       <td>{{candyArray.Name}}</td>
       <td>{{candyArray.Size}}</td>
       <td>{{candyArray.Price}}</td>
+      <td>{{candyArray.Picture}}</td>
     </tr>
   </table>
 </div>
 
 <div id="mainBoks">
 <div class="slikboks" *ngFor="let candyArray of CandyArray">
-    <img src="assets/Image/haribomatador.png" width="210px" height="210px" alt="Slikpose">
+    <img src="{{candyArray.Picture}}" width="210px" height="210px" alt="Slikpose">
     <div class="wrap-tekst">
   <p>{{candyArray.Name}}:{{candyArray.Price}} kr.-</p>
   <td>Str: {{candyArray.Size}}</td>
+
   </div>
   <button class="buy">Læg i kurv</button>
 </div>
+</div>
+
+
+<div class="buttons">
+  <button class="btn" (click)="GETFILM()">GET</button>
+  <button class="btn" (click)="GETWHEREFILM()">GET WHERE</button>
+  <button class="btn" (click)="POSTFILM()">CREATE</button>
+  <button class="btn" (click)="DELETEFILM()">DELETE </button>
+  <button class="btn" (click)="PUTFILM()">UPDATE</button>
+</div>
+
+<input type ="text" class="testinputfilm" placeholder="Søgefelt"/>
+<input type ="text" id=Titel placeholder="Titel"/>
+<input type ="text" id=RunTime placeholder="RunTime"/>
+<input type ="text" id=StartDate placeholder="StartDate"/>
+<input type ="text" id=EndDate placeholder="EndDate"/>
+<input type ="text" id=PictureF placeholder="Picture"/>
+<div>
+  <table border="1">
+    <tr>
+      <th>FilmID</th>
+      <th>Titel</th>
+      <th>RuneTime</th>
+      <th>StartDate</th>
+      <th>EndDate</th>
+    </tr>
+    <tr *ngFor="let filmArray of FilmArray">
+      <td>{{filmArray.FilmID}}</td>
+      <td>{{filmArray.Titel}}</td>
+      <td>{{filmArray.RunTime}}</td>
+      <td>{{filmArray.StartDate}}</td>
+      <td>{{filmArray.EndDate}}</td>
+    </tr>
+  </table>
+</div>
+<div class="Movie"*ngFor="let filmArray of FilmArray">
+  <img src="{{filmArray.Picture}}" alt="" width="150px" height="150px">
+<div class="wrap-knap">
+  <button class="Trailer">Trailer</button>
+  <button routerLink="/billet" id="Billet">Billet</button>
+</div>
+</div>
+
+
+<div class="buttons">
+  <button class="btn" (click)="GETCUSTOMER()">GET</button>
+  <button class="btn" (click)="GETWHERECUSTOMER()">GET WHERE</button>
+  <button class="btn" (click)="POSTCUSTOMER()">CREATE</button>
+  <button class="btn" (click)="DELETECUSTOMER()">DELETE </button>
+  <button class="btn" (click)="PUTCUSTOMER()">UPDATE</button>
+</div>
+
+<input type ="text" class="testinputcustomer" placeholder="Søgefelt"/>
+<input type ="text" id=Titel placeholder="Titel"/>
+<input type ="text" id=RunTime placeholder="RunTime"/>
+<input type ="text" id=StartDate placeholder="StartDate"/>
+<input type ="text" id=EndDate placeholder="EndDate"/>
+<input type ="text" id=PictureF placeholder="Picture"/>
+<div>
+  <table border="1">
+    <tr>
+      <th>CustomerID</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Zipcode</th>
+      <th>Password</th>
+    </tr>
+    <tr *ngFor="let customerArray of CustomerArray">
+      <td>{{customerArray.CustomerID}}</td>
+      <td>{{customerArray.Firstname}}</td>
+      <td>{{customerArray.Lastname}}</td>
+      <td>{{customerArray.Email}}</td>
+      <td>{{customerArray.Address}}</td>
+      <td>{{customerArray.Zipcode}}</td>
+      <td>{{customerArray.Password}}</td>
+    </tr>
+  </table>
 </div>
 
 <router-outlet></router-outlet>

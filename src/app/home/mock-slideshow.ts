@@ -1,6 +1,6 @@
 import {ImageObj} from './movie-slide';
 
-export const imageObject : ImageObj[]= [ 
+export const imageObject : ImageObj[]= [
     {
         image: 'assets/Image/infinitywar.png',
         thumbImage: 'assets/Image/infinitywar.png',
@@ -18,18 +18,18 @@ export const imageObject : ImageObj[]= [
       image: 'assets/Image/startrek.png', // Support base64 image
       thumbImage: 'assets/Image/startrek.png', // Support base64 image
       title: 'Startrek',
-      alt: 'Startrek', 
+      alt: 'Startrek',
     },
     {
       image: 'assets/Image/Tanhaji.png', // Support base64 image
       thumbImage: 'assets/Image/Tanhaji.png', // Support base64 image
       title: 'Tanhaji',
-      alt: 'Tanhaji', 
+      alt: 'Tanhaji',
     },
     {
       image: 'assets/Image/klodshansfilm.png', // Support base64 image
       thumbImage: 'assets/Image/klodshansfilm.png', // Support base64 image
       title: 'Klods-Hans',
-      alt: 'Klods-Hans', 
+      alt: 'Klods-Hans',
     }
 ]

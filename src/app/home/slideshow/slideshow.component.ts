@@ -31,16 +31,16 @@ export class SlideshowComponent implements OnInit {
 //   image: 'assets/Image/startrek.png', // Support base64 image
 //   thumbImage: 'assets/Image/startrek.png', // Support base64 image
 //   title: 'Startrek',
-//   alt: 'Startrek', 
+//   alt: 'Startrek',
 // },
 // {
 //   image: 'assets/Image/Tanhaji.png', // Support base64 image
 //   thumbImage: 'assets/Image/Tanhaji.png', // Support base64 image
 //   title: 'Tanhaji',
-//   alt: 'Tanhaji', 
+//   alt: 'Tanhaji',
 // },
 // ];
-  
+
 
   constructor() { }
 

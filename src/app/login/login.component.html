@@ -1,11 +1,11 @@
 <div id="Container">
     <div id="Wrap">
-        <form action="">
+        <form #LoginForm="ngForm" class="Login" >
             <img src="assets/Image/cat.png"
                 alt="profile picture">
-            
+
             <input class="inp" type="text" placeholder="Email" name="Email" required>
-            
+
             <input class="inp" type="password" placeholder="Adgangskode" name="Password" required>
             <button class="btn" type="submit">Login</button>
         </form>

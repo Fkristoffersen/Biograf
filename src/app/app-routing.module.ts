@@ -8,13 +8,14 @@ import { CandystoreComponent } from './candystore/candystore.component';
 import { MoviesComponent } from './movies-page/movies/movies.component';
 import { ChooseDayComponent } from './movies-page/choose-day/choose-day.component';
 import { ChooseTimeComponent } from './movies-page/choose-time/choose-time.component';
-import { TicketComponent } from './movies-page/ticket/ticket.component'; 
-import { CinemaoverviewComponent } from './cinemaoverview/cinemaoverview.component';
+import { TicketComponent } from './movies-page/ticket/ticket.component';
+import { CinemaoverviewComponent } from './home/cinemaoverview/cinemaoverview.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-import { SignupComponent } from './signup/signup.component';
-import { ResetComponent } from './reset/reset.component';
+import { SignupComponent } from './login/signup/signup.component';
+import { ResetComponent } from './login/reset/reset.component';
 import { AddEditComponent } from './candystore/add-edit/add-edit.component';
+import { CartComponent } from './candystore/cart/cart.component';
 
 
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'add-edit', component: AddEditComponent},
   {path: 'test', component: AddEditComponent},
   {path: '', redirectTo:'/home', pathMatch:'full'},
+  {path: 'cart', component: CartComponent}
 ];
 
 @NgModule({
@@ -41,4 +43,3 @@ const routes: Routes = [
 
 export class AppRoutingModule { };
 
- 
